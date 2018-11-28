@@ -1,0 +1,10 @@
+---
+- name: "[MOVE]"
+  hosts: all 
+  tasks:
+    - name: "[MOVE] - copy file to target server"
+      copy:
+        src: ./src_FILE.txt
+        dest: /tmp/receiveFILE.txt
+
+#lunch play book with : ansible-playbook -i hosts.yml -u exm571 playbook.yml
