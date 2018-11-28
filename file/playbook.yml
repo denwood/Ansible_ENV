@@ -1,10 +1,29 @@
 ---
 - name: "[MOVE]"
   hosts: all 
+
   tasks:
-    - name: "[MOVE] - copy file to target server"
+
+    # MOVE FILE 
+
+    - name: "[MOVE] - copy file to target servers"
       copy:
         src: ./src_FILE.txt
         dest: /tmp/receiveFILE.txt
 
+    # ADD LINE ON FILE 
+
+    - name: "[MOVE] - add line in file"
+      lineinfile:
+        path: /tmp/receiveFILE.txt
+        line: 'added line' 
+
+    #  REGEX 
+    # DOC LIB : https://docs.ansible.com/ansible/latest/modules/lineinfile_module.html?highlight=lineinfile
+    - name: "[MOVE] - REGEX "
+      lineinfile:
+        path: /tmp/receiveFILE.txt
+        regexp: '(.*)DKO(*.)' # catch all before "DKO" and after 
+        line: '\1dko\2'
+        backrefs: yes # else not accepte char : \
 #lunch play book with : ansible-playbook -i hosts.yml -u exm571 playbook.yml
