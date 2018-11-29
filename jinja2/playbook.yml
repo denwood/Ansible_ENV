@@ -1,0 +1,28 @@
+---
+- name: "[TEMPLATE]"
+  hosts: all
+  
+  vars: 
+    myapp_conf:
+     - "buffe = True"
+     - "memory = 800mb"
+     - "a = 2"
+  vars_files:
+     - ./vars/test.yml
+
+
+  tasks: 
+
+    - name: "[TEMPLATE] -  create directory"
+      file: 
+        path: /tmp/myapp/
+        state: directory
+        mode: 0755
+        owner: exm571
+
+    - name: "[TEMPLATE] - create template"
+      template: 
+        src:  ./templates/myapp.cfg.j2
+        dest: /tmp/myapp/myapp.cfg
+        mode: 0755
+

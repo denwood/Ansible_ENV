@@ -1,0 +1,17 @@
+# GOOD PRCITICE  
+# TEMPLATE : Configuration file deployed by ANSIBLE 
+
+# myAPP configuration 
+
+
+{% for param in myapp_conf %}
+{{ param }}
+{% endfor %}
+
+#-------------------------------------- 
+
+{% for user in users %}
+    {% if user.age != 27 %}
+{{ user.name}} 
+    {% endif%}
+{% endfor %}
