@@ -1,0 +1,4 @@
+---
+extvar: 
+  - { name: "KOUZNETSOV", age: 27}
+  - { name: "NAMEPROP", age: '1000'}

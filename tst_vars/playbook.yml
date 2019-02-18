@@ -1,0 +1,11 @@
+---
+- name: "[TEMPLATE]"
+  hosts: all
+
+  vars_files:
+    - ./vars/test.yml
+  tasks: 
+    - name: Installation VisualCode Extension
+      shell: echo "{{ extvar }}"      
+      args:
+        executable: /bin/bash

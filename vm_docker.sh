@@ -4,10 +4,10 @@
 # /!\ INIT VERSION OF DOCKER : v3.1
 
 # OPTIONS : 
-    # –proxy : utilisation perso mais à vous de l’adapter vous pouvez avec prévoir d’ajouter votre proxy dans http-proxy.conf
-    # –create : par défaut il créé 2 conteneurs mais vous pouvez en mettre autant que vous souhaitez
-    # — drop : pour nettoyer les conteneurs créés
-    # –infos : donne les ips,users des conteneurs
+    # –-proxy : utilisation perso mais à vous de l’adapter vous pouvez avec prévoir d’ajouter votre proxy dans http-proxy.conf
+    # -–create : par défaut il créé 2 conteneurs mais vous pouvez en mettre autant que vous souhaitez
+    # --drop : pour nettoyer les conteneurs créés
+    # -–infos : donne les ips,users des conteneurs
 
 
 ###############################################################

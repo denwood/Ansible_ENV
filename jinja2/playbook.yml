@@ -1,18 +1,15 @@
 ---
 - name: "[TEMPLATE]"
   hosts: all
-  
+
   vars: 
     myapp_conf:
-     - "buffe = True"
-     - "memory = 800mb"
-     - "a = 2"
-  vars_files:
-     - ./vars/test.yml
-
-
+      - "buffe = True"
+      - "memory = 800mb"
+      - "a = 2"
+    vars_files:
+      - ./vars/test.yml
   tasks: 
-
     - name: "[TEMPLATE] -  create directory"
       file: 
         path: /tmp/myapp/
@@ -25,4 +22,5 @@
         src:  ./templates/myapp.cfg.j2
         dest: /tmp/myapp/myapp.cfg
         mode: 0755
+
 
